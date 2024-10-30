@@ -1,0 +1,29 @@
+{
+  "name": "unit-test",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "module.js",
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "babel": "^5.8.38",
+    "babel-jest": "^29.7.0",
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(sucrase)/)"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx|mjs)$": "babel-jest"
+    }
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.0"
+  }
+}
